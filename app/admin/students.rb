@@ -132,7 +132,6 @@ ActiveAdmin.register User, as: "Student" do
         UserMailer.registration_email(user, params[:user][:password]).deliver_now
         redirect_to admin_students_path, notice: "User created successfully. Email has been sent."
       else
-        puts "User creation failed: #{user.errors.full_messages[0]}"
         redirect_to new_admin_student_path, alert: user.errors.full_messages.to_sentence
       end
     end

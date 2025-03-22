@@ -69,7 +69,6 @@ class User < ApplicationRecord
 
   def send_registration_email
     return if Rails.env.test? # Avoid emails during tests
-    puts "self.sign_in_count==============>#{self.is_created_by_admin}"
     unless self.is_created_by_admin
       UserMailer.registration_email(self).deliver_now
     end
