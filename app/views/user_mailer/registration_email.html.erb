@@ -1,0 +1,14 @@
+<h1>Welcome to Our Platform</h1>
+<p>Hello <%= @user.name %>,</p>
+<p>Your account has been created successfully.</p>
+<% if @password.present? %>
+  <p>Here are your login credentials:</p>
+  <ul>
+    <li><strong>Email:</strong> <%= @user.email %></li>
+    <li><strong>Password:</strong> <%= @password %></li>
+  </ul>
+  <p>Please log in and change your password.</p>
+<% else %>
+  <p>Verification is Pending</p>
+  <p>Admin will verify your details soon.</p>
+<% end %>

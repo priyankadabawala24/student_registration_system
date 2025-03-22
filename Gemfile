@@ -65,3 +65,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+gem 'dotenv-rails', groups: [:development, :test]
+gem "devise"
+gem 'activeadmin'
+gem 'sassc-rails'
+gem 'whenever', require: false
